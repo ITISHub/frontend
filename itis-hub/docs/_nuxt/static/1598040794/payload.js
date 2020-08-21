@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/", (function(a){return {data:[{}],fetch:[],mutations:[["homecards\u002FsetHomecards",[{id:1,title:"разборы теории",image:a,url:"\u002Fdisciplines"},{id:2,title:"разборы практики",image:a,url:"\u002Fpractice"},{id:3,title:"о нас",image:a,url:"\u002Fabout"}]]]}}(null)));
