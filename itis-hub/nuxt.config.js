@@ -31,6 +31,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'yandex-verification', content: 'e5b1c0b0de095c0b' },
+      { name: 'google-site-verification', content: 'aurZPqygKOwFXpAT6vp8dLzWkuBfb_lt_XI8asUinNU'},
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
@@ -71,7 +73,28 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+      
+    'nuxt-robots-module',  
   ],
+    
+  robots: [
+    {
+      UserAgent: 'Googlebot',
+      Disallow: ['/_nuxt/commons', '/_nuxt/fonts', '/_nuxt/img'],
+      Allow: '/_nuxt/pages'   
+    },
+    {
+      UserAgent: 'Yandexbot',
+      Disallow: ['/_nuxt/commons', '/_nuxt/fonts', '/_nuxt/img'],
+      Allow: '/_nuxt/pages'
+    },
+    {
+      UserAgent: '*',
+      Disallow: ['/_nuxt/commons', '/_nuxt/fonts', '/_nuxt/img'],
+      Allow: '/_nuxt/pages'
+    }
+  ],    
+    
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
